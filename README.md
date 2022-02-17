@@ -31,8 +31,8 @@ image and use `fido_linux.64.sh` instead of `fido_linux.sh` to build this softwa
 
 ## To create configuration
 
-1. `$ ./fido-docker-build`
-2. `$ ./fido-init` and then inside container root shell (which will open):
+1. `$ .\fido-docker-build.ps1`
+2. `$ .\fido-init.ps1` and then inside container root shell (which will open):
     1. `# cd fidoip-1.0.5`
     2. `# ./setup_config.bash` and answer some questions
     3. `# ./set_perm.sh fido`
@@ -59,7 +59,7 @@ Run `$ ./fido-shell`, then you will see container user shell
 * `$ g` to launch GoldEd
 
 If you want to automate `$ rs`, `./fido-rs` is at your service, it just launches `rs` in `fido-shell`
-without requirung `STDIN` to be a TTY.
+without requiring `STDIN` to be a TTY.
 
 # Node mode
 
