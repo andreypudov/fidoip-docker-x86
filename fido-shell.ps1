@@ -3,6 +3,6 @@
 Push-Location
 Set-Location $PSScriptRoot
 
-Invoke-Expression "$Docker run $Mounts --rm -it $Image"
+Invoke-Expression "$Docker run $Mounts --rm -it $Image ${MyInvocation.Line}"
 
 Pop-Location
