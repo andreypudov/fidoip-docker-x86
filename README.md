@@ -64,3 +64,8 @@ without requiring `STDIN` to be a TTY.
 # Node mode
 
 Have no experience in running full-featured nodes, so it is empty here
+
+# Known issues
+
+- ST_EDITSTATUS has wrong format. Read NOTEWORK.TXT for details
+  In `/usr/local/etc/golded+` change `ST_EDITSTATUS "Редактирование %i,%i(%02X). %s"` to `ST_EDITSTATUS "Edit %i,%i(%02X). %s"`
