@@ -31,6 +31,16 @@ image and use `fido_linux.64.sh` instead of `fido_linux.sh` to build this softwa
 
 ## To create configuration
 
+Linux:
+
+1. `$ sudo ./fido-docker-build`
+2. `$ sudo ./fido-init.ps1` and then inside container root shell (which will open):
+    1. `# cd fidoip-1.0.5`
+    2. `# ./setup_config.bash` and answer some questions
+    3. `# ./set_perm.sh fido`
+
+Windows:
+
 1. `$ .\fido-docker-build.ps1`
 2. `$ .\fido-init.ps1` and then inside container root shell (which will open):
     1. `# cd fidoip-1.0.5`
@@ -53,7 +63,7 @@ with optional arg, e.g.: `./fido-docker-build --build-arg timezone=Asia/Novosibi
 
 ## To use configuration
 
-Run `$ ./fido-shell`, then you will see container user shell
+Run `$ sudo ./fido-shell`, then you will see container user shell
 
 * `$ rs` to try to send/receive mail
 * `$ g` to launch GoldEd
