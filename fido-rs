@@ -2,4 +2,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/_common
 
-$DOCKER run $MOUNTS --rm $IMAGE sudo -u fido rs
+"$DOCKER" run -v "$DIR"/home/fido:/home/fido \
+              -v "$DIR"/usr/local/etc:/usr/local/etc \
+              -v "$DIR"/usr/local/bin:/usr/local/bin \
+   --rm -it "$IMAGE" sudo -u fido rs

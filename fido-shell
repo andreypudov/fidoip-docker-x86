@@ -1,5 +1,8 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source $DIR/_common
+source "$DIR/_common"
 
-$DOCKER run $MOUNTS --rm -it $IMAGE $*
+"$DOCKER" run -v "$DIR"/home/fido:/home/fido \
+              -v "$DIR"/usr/local/etc:/usr/local/etc \
+              -v "$DIR"/usr/local/bin:/usr/local/bin \
+   --rm -it "$IMAGE" $*
